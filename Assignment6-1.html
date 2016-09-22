@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MinMax</title>
+	<script type="text/javascript">
+		var a = [2,3,50,20,11,100,50,2,5,1,-1,-10];
+		function maxNum()
+		{
+			for(i=0;i<a.length-1;i++)
+			{
+				if(a[i] > a[i+1])
+				{
+					temp = a[i];
+					a[i] = a[i+1];
+					a[i+1] = temp;
+				}
+			}
+			document.getElementById('maxnum').value = a[i];
+		}
+		function minNum()
+		{
+			for(i=0;i<a.length-1;i++)
+			{
+				if(a[i] < a[i+1])
+				{
+					temp = a[i];
+					a[i] = a[i+1];
+					a[i+1] = temp;
+				}
+			}
+			document.getElementById('minnum').value = a[i];	
+		}		
+	</script>
+</head>
+<body>
+<h1> This program shows the Maximum and Minimum Number from a pre-defined Numerical Array</h1>
+<p>Array Value is : [2,3,50,20,11,100,50,2,5,1,-1,-10] </p>
+<input type="button" name="giveIt" id="giveIt" onclick="maxNum();" value="Show Max Number">
+<input type="text" name="maxnum" id="maxnum"><br>
+<input type="button" name="showmin" id="showmin" onclick="minNum();" value="Show Min Number">
+<input type="text" name="minnum" id="minnum">
+<style type="text/css">
+	input{
+		margin-bottom: 10px;
+	}
+</style>
+</body>
+</html>
